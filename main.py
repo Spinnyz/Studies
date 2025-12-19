@@ -1,3 +1,2 @@
-str = "Pedro Lucas"
-
-print (str[3:6])
+print(*range(1, 6), sep="\n")
+print("Fim")
