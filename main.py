@@ -1,2 +1,6 @@
-print(*range(1, 6), sep="\n")
-print("Fim")
+texto = "Python"
+ 
+novo_texto = ""
+for i in texto:
+    novo_texto += f"* {i}"
+print(novo_texto)
