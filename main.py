@@ -1,14 +1,30 @@
-for i in range(10):
-    if i == 2:
-        print ("i é 2")
+palavra = "python"
+letra_acertada = ""
+
+erros = 0
+while True:
+    letra_digitada = input("Digite uma letra: ").lower()
+    
+    if len(letra_digitada) != 1:
+        print("Digite somente uma letra")
         continue
+    else:
+        if letra_digitada in palavra:
+            print ("correto")
+            letra_acertada += letra_digitada
+        else:
+            print("incorreto")
+            erros += 1
 
-    elif i == 8:
-        print ("i é 8")
-        continue
+    palavra_formada = ""
+    for letra_correta in palavra:
+        if letra_correta in letra_acertada:
+            palavra_formada += letra_correta
+        else:
+            palavra_formada += "_"
 
-    for j in range (1,3):
-        print (i,j)
+    print (palavra_formada)
 
-else:
-    print ("fim")
+    if palavra_formada == palavra:
+        print (f"A palavra era {palavra}")
+        print (f"Você cometeu {erros} erros.")
