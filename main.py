@@ -1,5 +1,7 @@
 lista = [10,20,30,40,50]
 
-lista.append (70)
+lista_b = [60,80,90]
 
-print (lista)
+lista.extend(lista_b)
+
+print(lista )
