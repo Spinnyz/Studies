@@ -1,7 +1,22 @@
-lista = [10,20,30,40,50]
+lista = []
 
-lista_b = [60,80,90]
+while True:
+    user = input ("[i]inserir [a]apagar [l]listar: ").lower().strip()
 
-lista.extend(lista_b)
+    if user == "i":
+        valor = input ("Oque deseja inserir: ")
+        lista.append(valor)
 
-print(lista )
+    elif user == "a":
+        remove = input("Oque deseja remover: ")
+        if remove in lista:
+            print ("Removido")
+            lista.remove(remove)
+        else:
+            print ("Não encontrado")
+    
+    elif user == "l":
+        for indice, item in enumerate(lista):
+            print (indice, item)
+    else:
+        print ("Escolha uma opção valida")
