@@ -1,4 +1,9 @@
-cpf = "74682489070"
+import re
+
+cpf = re.sub (
+    r"[^0-9]",
+    "",
+    "74682489070")
 
 # ---------- Primeiro dígito ----------
 nove_digitos = cpf[:9]
