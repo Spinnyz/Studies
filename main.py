@@ -1,8 +1,12 @@
-frase = "Olha que,  legal"
+cpf = "57316421096"
 
-separador = (frase.split(",")) 
+nove_digitos = cpf[:9]
 
-for i, frase in enumerate(separador):
-    separador[i] = separador[i].strip()
+contador_regressivo = 10
+soma = 0
 
-print(separador)
+for i in nove_digitos:
+    valor = int(i) * contador_regressivo
+    soma += valor
+    x -= 1
+    print (valor, end=" ")
