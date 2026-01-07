@@ -1,6 +1,16 @@
-#criar uma função que soma dois números e mostra o resultado.
+# Crie uma função chamada par_ou_impar(numero) que:
 
-def soma (a,b):
-    print (a+b)
+# Recebe um número inteiro.
 
-soma(1,2)
+# Retorna "par" se o número for par.
+
+# Retorna "ímpar" se for ímpar.
+
+def par_ou_impar(numero):
+    if numero % 2 ==0:
+        print ("par")
+    else:
+        print ("Impar")
+    
+
+par_ou_impar(6)
