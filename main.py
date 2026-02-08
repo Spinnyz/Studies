@@ -1,22 +1,18 @@
-class Node:
-    def __init__(self, valor):
-        self.valor = valor
-        self.esq = None
-        self.dir = None
+
+pessoa = {
+    "nome": "Pedro",
+    "sobrenome": "Lucas"
+}
+
+dados_pessoa = {
+    "idade": 16,
+    "altura": 1.75,
+}
+
+def mostra_argumentos_nomeados(*args, **kwargs):
+    for chave, valor in kwargs.value():
+        print(f"{chave} = {valor}")
 
 
-def inverter_arvore(no):
-    if no is None:
-        return None
 
-    # troca os filhos
-    no.esq, no.dir = no.dir, no.esq
-
-    # inverte recursivamente
-    inverter_arvore(no.esq)
-    inverter_arvore(no.dir)
-
-    return no
-
-
-print (inverter_arvore(raiz))
+mostra_argumentos_nomeados(**pessoa, **dados_pessoa)
